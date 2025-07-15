@@ -4675,7 +4675,7 @@ a.fc-day-grid-event.fc-event.primary:focus {
 }
 
 .fc button.fc-state-active {
-    background-image: linear-gradient(to right, #E, #E99E24);
+    background-image: linear-gradient(to right, #E99E24, #E99E24);
     color: #fff
 }
 
@@ -7497,6 +7497,20 @@ ol {
     -ms-animation: blinking 2s infinite both;
     -o-animation: blinking 2s infinite both;
     animation: blinking 2s infinite both
+}
+
+.pt_50{
+    padding-top: 50px;
+}
+.pb_50{
+    padding-bottom: 50px;
+}
+.text-center.display-3{
+    text-align: center;
+}
+section,
+div{
+    scroll-margin-top: 100px;
 }
 
 @-moz-keyframes blinking {
