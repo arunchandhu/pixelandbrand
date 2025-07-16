@@ -3708,7 +3708,7 @@ html.locked-scrolling body {
 }
 
 .btn-primary {
-    background-image: linear-gradient(to right, #E, #E99E24)
+    background-image: linear-gradient(to right, #E99E24, #E99E24)
 }
 
 .btn-primary:hover,
@@ -3716,7 +3716,7 @@ html.locked-scrolling body {
 .btn-primary:active,
 .btn-primary:focus:active {
     border-color: transparent;
-    background-image: linear-gradient(to right, #E, #E99E24);
+    background-image: linear-gradient(to right, #E99E24, #E99E24);
     color: #E99E24
 }
 
@@ -3989,7 +3989,7 @@ html.locked-scrolling body {
 .btn-submit:focus,
 .btn-submit:active,
 .btn-submit:focus:active {
-    background-image: linear-gradient(to right, #E, #E99E24);
+    background-image: linear-gradient(to right, #E99E24, #E99E24);
     color: #fff;
     outline: none
 }
@@ -4602,7 +4602,7 @@ a.fc-event {
 
 .fc-event.primary,
 a.fc-event.primary {
-    background-image: linear-gradient(to right, #E, #E99E24);
+    background-image: linear-gradient(to right, #E99E24, #E99E24);
     color: #fff
 }
 
@@ -6672,7 +6672,7 @@ select.form-control {
     -ms-border-radius: 12px;
     -o-border-radius: 12px;
     border-radius: 12px;
-    background-image: linear-gradient(to right, #E, #E99E24)
+    background-image: linear-gradient(to right, #E99E24, #E99E24)
 }
 
 .progress[value]::-moz-progress-bar {
@@ -6681,7 +6681,7 @@ select.form-control {
     -ms-border-radius: 12px;
     -o-border-radius: 12px;
     border-radius: 12px;
-    background-image: linear-gradient(to right, #E, #E99E24)
+    background-image: linear-gradient(to right, #E99E24, #E99E24)
 }
 
 .progress[value]::-ms-fill {
@@ -6690,7 +6690,7 @@ select.form-control {
     -ms-border-radius: 12px;
     -o-border-radius: 12px;
     border-radius: 12px;
-    background-image: linear-gradient(to right, #E, #E99E24)
+    background-image: linear-gradient(to right, #E99E24, #E99E24)
 }
 
 .progress-primary[value]::-ms-fill {
@@ -7499,18 +7499,37 @@ ol {
     animation: blinking 2s infinite both
 }
 
-.pt_50{
+.pt_50 {
     padding-top: 50px;
 }
-.pb_50{
+
+.pb_50 {
     padding-bottom: 50px;
 }
-.text-center.display-3{
+
+.text-center.display-3 {
     text-align: center;
 }
+
 section,
-div{
+div {
     scroll-margin-top: 100px;
+}
+
+@media (max-width: 776px) {
+
+    section,
+    .section {
+        padding-top: 50px;
+        padding-bottom: 0px;
+    }
+    #home {
+        padding: 100px 0;
+    }
+    .display-3 {
+        font-size: 3.5rem;
+        text-align: center;
+    }
 }
 
 @-moz-keyframes blinking {
