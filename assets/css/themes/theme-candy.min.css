@@ -7520,12 +7520,7 @@ div {
     grid-template-columns: auto 1fr;
     gap: 1rem;
 }
-#smm{
-    height: 40vh;
-    background: url(../images/smm.jpg) no-repeat center center;
-    background-size: cover;
-    position: relative; 
-}
+
 
 @media (max-width: 776px) {
 
