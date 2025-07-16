@@ -7038,7 +7038,7 @@ p.lead {
 }
 
 .text-lg {
-    font-size: 1.3rem
+    font-size: 1rem
 }
 
 .text-sm {
@@ -7514,6 +7514,17 @@ ol {
 section,
 div {
     scroll-margin-top: 100px;
+}
+.feature.feature-1{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+}
+#smm{
+    height: 40vh;
+    background: url(../images/smm.jpg) no-repeat center center;
+    background-size: cover;
+    position: relative; 
 }
 
 @media (max-width: 776px) {
