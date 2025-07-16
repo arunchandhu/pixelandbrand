@@ -1,13 +1,3 @@
-/* -----------------------------------------------------------------------------
-
-Skill - Modern & Creative HTML5 Template
-
-File:           JS Core
-Version:        1.1
-Last change:    22/11/16 
-Author:         Suelo 
-
--------------------------------------------------------------------------------- */
 
 "use strict";
 
@@ -145,13 +135,13 @@ var Skill = {
                 }
             }
 
-            $menuItem.on('click', function(){
-                if($(this).attr('href').indexOf('#') != -1 && !$(this).parent('li').hasClass('has-children') &&!$(this).hasClass('go-back')) {
-                    $body.removeClass('mobile-nav-open');
-                    $mobileNavToggle.removeClass('open');
-                    return false;
-                }
-            });
+            // $menuItem.on('click', function(){
+            //     if($(this).attr('href').indexOf('#') != -1 && !$(this).parent('li').hasClass('has-children') &&!$(this).hasClass('go-back')) {
+            //         $body.removeClass('mobile-nav-open');
+            //         $mobileNavToggle.removeClass('open');
+            //         return false;
+            //     }
+            // });
 
             var checkMenuItem = function(id) {
                 $menuItem.each(function(){
@@ -345,7 +335,7 @@ var Skill = {
                 });
             }
             
-            function loadContent() {　
+            function loadContent() {
 
                $ajaxTmp.load(toLoad, function() {
 
