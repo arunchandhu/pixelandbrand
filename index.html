@@ -40,7 +40,7 @@
 
         <!-- Logo -->
         <a href="index.html" class="logo">
-            <img src="assets/img/logo.png" alt="">
+            <img src="assets/img/logo-b-b.png" alt="">
         </a>
 
         <!-- Navigation -->
@@ -114,6 +114,14 @@
                                 </button>
                             </div>
                         </form>
+                    </div>
+                    <div class="col-lg-7 col-md-6 col-sm-8 mx-auto custom-lg-left">
+                        <div class="image-container">
+                            <img src="assets/img/phone.png" class="d-img phone" alt="">
+                            <img src="assets/img/d-img/whatsapp.png" alt="" class="d-img whats_app-i">
+                            <img src="assets/img/d-img/instagram.png" alt="" class="d-img instagram-i">
+                            <img src="assets/img/d-img/facebook.png" alt="" class="d-img facebook-i">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -603,12 +611,39 @@
     <script>
         document.getElementById("year").innerHTML = new Date().getFullYear();
 
-        const mobileToggle = document.getElementById('mobile-nav-toggle');
-        const homeSection = document.getElementById('home');
 
-        mobileToggle.addEventListener('click', function () {
-            homeSection.classList.toggle('animate-right');
+        const toggleBtns = document.querySelectorAll('.header-dark');
+
+        const icons = document.querySelectorAll('.d-img');
+        let isToggled = false;
+
+        toggleBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (!isToggled) {
+                    // First click → jump & rotate
+                    icons.forEach(icon => {
+                        icon.classList.remove('back');     // remove reset class
+                        void icon.offsetWidth;             // force reflow
+                        icon.classList.add('animate');     // trigger animation
+                    });
+                } else {
+                    // Second click → reset to original
+                    icons.forEach(icon => {
+                        icon.classList.remove('animate');  // remove jumpRotate animation
+                        icon.classList.add('back');        // rotate back to 0
+                    });
+                }
+
+                isToggled = !isToggled; // toggle state
+            });
         });
+
+
+
+
+
+
+
     </script>
 
 </body>

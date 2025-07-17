@@ -1979,7 +1979,7 @@ img {
     -o-transition: -o-transform .4s ease-out;
     transition: transform 0.4s ease-out;
     padding: 0 20px;
-    
+
 
 }
 
@@ -7519,16 +7519,83 @@ ol {
     gap: 1rem;
 }
 
+/* 
 #home .bg-image,
 #home #home-content {
   transition: transform 0.6s ease-in-out;
 }
 
-/* When toggled – push to right */
 #home.animate-right .bg-image,
 #home.animate-right #home-content {
-  transform: translateX(100px); /* adjust px as needed */
+  transform: translateX(100px); 
+} */
+
+.image-container {
+    position: relative;
 }
+
+.image-container .d-img {
+    position: absolute;
+}
+
+.image-container .phone {
+    top: -200px;
+    left: 200px;
+    width: 500px;
+    z-index: 1;
+    transition: 0.3s linear;
+}
+
+.image-container .instagram-i,
+.image-container .whats_app-i,
+.image-container .facebook-i {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transform: rotate(15deg);
+}
+
+.image-container .instagram-i {
+    top: 10%;
+    right: 20%;
+    z-index: 2;
+
+}
+
+.image-container .facebook-i {
+    bottom: 150px;
+    right: 50%;
+}
+
+.image-container .whats_app-i {
+    bottom: -450px;
+    right: 50%;
+}
+
+.image-container img {
+    transition: transform 0.6s ease;
+}
+
+@keyframes jumpRotate {
+  0%   { transform: translateY(0) rotate(0deg); }
+  100%  { transform: translateY(-30px) rotate(-10deg); }
+}
+
+/* 🔄 Back to original */
+.image-container .d-img {
+  transition: transform 0.6s ease;
+}
+
+.image-container .d-img.animate {
+  animation: jumpRotate 0.6s ease forwards;
+}
+
+.image-container .icon.back {
+  transform: rotate(0deg) translateY(0);
+}
+
+
 
 
 @media (max-width: 776px) {
