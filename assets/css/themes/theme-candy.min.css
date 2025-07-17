@@ -7574,7 +7574,7 @@ ol {
 }
 
 .image-container img {
-    transition: transform 0.6s ease;
+    transition: transform 04s ease;
 }
 
 @keyframes jumpRotate {
@@ -7584,11 +7584,11 @@ ol {
 
 /* 🔄 Back to original */
 .image-container .d-img {
-  transition: transform 0.6s ease;
+  transition: transform 04s ease;
 }
 
 .image-container .d-img.animate {
-  animation: jumpRotate 0.6s ease forwards;
+  animation: jumpRotate 04s ease forwards;
 }
 
 .image-container .icon.back {
