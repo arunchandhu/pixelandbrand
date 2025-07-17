@@ -7519,6 +7519,17 @@ ol {
     gap: 1rem;
 }
 
+#home .bg-image,
+#home #home-content {
+  transition: transform 0.6s ease-in-out;
+}
+
+/* When toggled – push to right */
+#home.animate-right .bg-image,
+#home.animate-right #home-content {
+  transform: translateX(100px); /* adjust px as needed */
+}
+
 
 @media (max-width: 776px) {
 
