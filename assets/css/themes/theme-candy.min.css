@@ -7541,7 +7541,8 @@ ol {
 .image-container .phone {
     top: -200px;
     left: 200px;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     z-index: 1;
     transition: 0.3s linear;
 }
@@ -7550,7 +7551,7 @@ ol {
 .image-container .whats_app-i,
 .image-container .facebook-i {
     position: absolute;
-    width: 150px;
+    max-width: 150px;
     height: 150px;
     object-fit: cover;
     transform: rotate(15deg);
@@ -7594,7 +7595,99 @@ ol {
 .image-container .icon.back {
   transform: rotate(0deg) translateY(0);
 }
+/* Responsive adjustments */
+@media (max-width: 1200px){
+    .image-container .phone {
+        top: 10vh;
+        left: 5vw;
+        width: 350px;
+    }
+    .image-container .instagram-i,
+    .image-container .whats_app-i,
+    .image-container .facebook-i {
+        width: 100px;
+        height: 100px;
+    }
+     .image-container .instagram-i {
+        top: 150px;
+        right: 30%;
+    }
 
+    .image-container .facebook-i {
+        top: 30px;
+        right: 50%;
+    }
+
+    .image-container .whats_app-i {
+        bottom: -800;
+        right: 65%;
+    }
+}
+@media (max-width: 991px){
+     .image-container .phone {
+        top: 10vh;
+        left: 5vw;
+        width: 350px;
+    }
+
+    .image-container .instagram-i,
+    .image-container .whats_app-i,
+    .image-container .facebook-i {
+        width: 80px;
+        height: 80px;
+    }
+
+    .image-container .instagram-i {
+        top: 150px;
+        right: 0;
+    }
+
+    .image-container .facebook-i {
+        top: 30px;
+        right: 40%;
+    }
+
+    .image-container .whats_app-i {
+        bottom: -800;
+        right: 50%;
+    }
+}
+@media (max-width: 768px) {
+   
+    .d-none{
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container .phone {
+        top: 12vh;
+        left: 5vw;
+        width: 80vw;
+    }
+
+    .image-container .instagram-i,
+    .image-container .whats_app-i,
+    .image-container .facebook-i {
+        width: 30vw;
+        max-width: 80px;
+    }
+
+    .image-container .instagram-i {
+        top: 3%;
+        right: 10%;
+    }
+
+    .image-container .facebook-i {
+        bottom: 8vh;
+        right: 35%;
+    }
+
+    .image-container .whats_app-i {
+        bottom: 8vh;
+        right: 15%;
+    }
+}
 
 
 
