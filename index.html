@@ -611,38 +611,26 @@
     <script>
         document.getElementById("year").innerHTML = new Date().getFullYear();
 
-
         const toggleBtns = document.querySelectorAll('.header-dark');
-
         const icons = document.querySelectorAll('.d-img');
         let isToggled = false;
 
         toggleBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                if (!isToggled) {
-                    // First click → jump & rotate
-                    icons.forEach(icon => {
-                        icon.classList.remove('back');     // remove reset class
-                        void icon.offsetWidth;             // force reflow
-                        icon.classList.add('animate');     // trigger animation
-                    });
-                } else {
-                    // Second click → reset to original
-                    icons.forEach(icon => {
-                        icon.classList.remove('animate');  // remove jumpRotate animation
-                        icon.classList.add('back');        // rotate back to 0
-                    });
-                }
+                icons.forEach(icon => {
+                    icon.classList.remove('animate', 'reverse-animate'); // clear any old animation
+                    void icon.offsetWidth; // force reflow to restart animation
 
-                isToggled = !isToggled; // toggle state
+                    if (!isToggled) {
+                        icon.classList.add('animate'); // play jump forward animation
+                    } else {
+                        icon.classList.add('reverse-animate'); // play back-to-original animation
+                    }
+                });
+
+                isToggled = !isToggled;
             });
         });
-
-
-
-
-
-
 
     </script>
 

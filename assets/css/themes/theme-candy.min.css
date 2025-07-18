@@ -7519,17 +7519,6 @@ ol {
     gap: 1rem;
 }
 
-/* 
-#home .bg-image,
-#home #home-content {
-  transition: transform 0.6s ease-in-out;
-}
-
-#home.animate-right .bg-image,
-#home.animate-right #home-content {
-  transform: translateX(100px); 
-} */
-
 .image-container {
     position: relative;
 }
@@ -7544,7 +7533,6 @@ ol {
     width: 100%;
     max-width: 500px;
     z-index: 1;
-    transition: 0.3s linear;
 }
 
 .image-container .instagram-i,
@@ -7575,26 +7563,27 @@ ol {
 }
 
 .image-container img {
-    transition: transform 04s ease;
+    transition: transform 01s ease;
 }
 
 @keyframes jumpRotate {
   0%   { transform: translateY(0) rotate(0deg); }
-  100%  { transform: translateY(-30px) rotate(-10deg); }
+  100% { transform: translateY(-30px) rotate(-10deg); }
 }
 
-/* 🔄 Back to original */
-.image-container .d-img {
-  transition: transform 04s ease;
+@keyframes jumpBackRotate {
+  0%   { transform: translateY(-30px) rotate(-10deg); }
+  100% { transform: translateY(0) rotate(0deg); }
 }
 
 .image-container .d-img.animate {
-  animation: jumpRotate 04s ease forwards;
+  animation: jumpRotate 0.5s ease forwards;
 }
 
-.image-container .icon.back {
-  transform: rotate(0deg) translateY(0);
+.image-container .d-img.reverse-animate {
+  animation: jumpBackRotate 0.5s ease forwards;
 }
+
 /* Responsive adjustments */
 @media (max-width: 1200px){
     .image-container .phone {
